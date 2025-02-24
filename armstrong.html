@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function arm()
+       {
+        var n=parseInt(prompt("Enter the number:"))
+        let cube=0,len=0,sum=0,temp=0;
+        temp=n
+        len=n.toString().length
+        // console.log(n.length);
+        
+        console.log(len)
+        for(;n>0;)
+        {
+            cube=n%10; //cube=153%10=3
+            sum += Math.pow(cube, len); 
+            n = Math.floor(n / 10);
+        }
+
+        if(temp==sum)
+        {
+            alert("it is an armstrong number")
+        }
+        else
+        {
+            alert("it is not an armstrong number")
+        }
+       } 
+       arm()
+    </script>
+</body>
+</html>
