@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f">
+        <label for="">Enter Ur Name</label>
+        <input type="text" id="name">
+        <br><br>
+        <label for="">Enter Ur Email</label>
+        <input type="email" id="email">
+        <br><br>
+        <label for="">Enter Ur Password</label>
+        <input type="password" id="pass">
+        <br><br>
+        <label for="">Enter Ur age</label>
+        <input type="number" id="age">
+        <br><br>
+        <label for="">Enter your Date of birth</label>
+        <input type="date" id="db">
+        <label for="">select your gender</label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="other">Other 
+        <br><br> 
+        city:
+        <select name="" id="city">
+            <option value="surat">surat</option>
+            <option value="mumbai">mumbai</option>
+            <option value="goa">goa</option>
+        </select><br><br> <br><br>
+        <input type="button" value="CLick Here" onclick="printname()">
+        
+
+    <script>
+        function printname() {
+            let name=document.getElementById("name").value
+            let email=document.getElementById("email").value
+            let pass=document.getElementById("pass").value
+            let age=document.getElementById("age").value
+            let db=document.getElementById("db").value
+            let gender=document.f.gender.value
+            let city=document.getElementById("city").value
+
+            document.write("<h1>Name :- </h1>"+name)
+            document.write("<h1>Email :- </h1>"+email)
+            document.write("<h1>Password :- </h1>"+pass)
+            document.write("<h1>Age :-</h1> "+age)
+            document.write("<h1>Date Of Birth :-</h1> "+db)
+            document.write("<h1>Gender :-</h1> "+gender)
+            document.write("<h1>City</h1>"+city)
+
+            console.log("name="+name)
+            console.log("emial="+email)
+            console.log("password="+pass)
+            console.log("age="+age)
+            console.log("date of birth="+db)
+            console.log("gender"+gender)
+
+        }
+    </script>
+</body>
+</html>
