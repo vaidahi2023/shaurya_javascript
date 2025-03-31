@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+    <style>
+        #mouseArea {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 300px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="mouseArea">Mouse is outside</div>
+    <script>
+        const mouseArea = document.getElementById('mouseArea');
+        let enterExitCount = 0; // Counter for mouse enter/leave events
+
+        // Click event
+        mouseArea.addEventListener('click', () => {
+            console.log("Div was clicked");
+        });
+
+        // Double-click event
+        mouseArea.addEventListener('dblclick', () => {
+            mouseArea.style.backgroundColor = 'lightgreen';
+            console.log("Div was double-clicked");
+        });
+
+        // Mouse down event
+        mouseArea.addEventListener('mousedown', () => {
+            console.log("Mouse button pressed down");
+        });
+
+        // Mouse up event
+        mouseArea.addEventListener('mouseup', () => {
+            console.log("Mouse button released");
+        });
+
+        // Mouse over event
+        mouseArea.addEventListener('mouseover', () => {
+            mouseArea.textContent = "Mouse is inside";
+        });
+
+        // Mouse out event
+        mouseArea.addEventListener('mouseout', () => {
+            mouseArea.textContent = "Mouse is outside";
+            enterExitCount++;
+            console.log(`Mouse has entered and left the area ${enterExitCount} times.`);
+        });
+
+        // Mouse move event
+        mouseArea.addEventListener('mousemove', (event) => {
+            const x = event.clientX;
+            const y = event.clientY;
+            console.log(`Mouse position: X = ${x}, Y = ${y}`);
+        });
+    </script>
+</body>
+</html>
