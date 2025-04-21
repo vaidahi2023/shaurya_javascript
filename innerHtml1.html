@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Name:<input type="text" id="name"><br><br>
+        Age:<input type="number" id="age"><br><br>
+        <input type="button" onclick="print()" value="submit">
+        <p id="para"></p>
+    </form>
+    <script>
+        function print()
+        {
+            var n=document.getElementById("name").value 
+            var age=document.getElementById("age").value   
+            console.log(n)
+            document.getElementById("para").innerHTML=`your name is ${n} <br>your age is ${age}`
+           
+
+        }
+    </script>
+</body>
+</html>
