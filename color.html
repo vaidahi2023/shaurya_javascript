@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .z{
+
+        }
+    </style>
+</head>
+<body>
+    <form name="f">
+        <input type="radio" name="c" value="red"><p>Red</p>
+        <input type="radio" name="c" value="green"><p>Green</p>
+        <input type="radio" name="c" value="yellow"><p>Yellow</p>
+        <input type="radio" name="c" value="blue"><p> Blue</p>
+        <input type="button" onclick="a()" value="submit">
+    </form>
+    <p id="z" ></p>
+    <script>
+  function a(){
+        var o=document.f.c.value
+        var x=""
+        if(o == "red"){x=o}
+        else if(o == "green"){x=o}
+        else if(o == "yellow"){x=o}
+        else if(o == "blue"){x=o}
+        document.getElementById("z").innerHTML=`<h1 style="color:${x}">The Color You Have Chosen Is : ${x}</h1>`
+            console.log(x)
+            console.log(o)
+      }  
+    </script>
+</body>
+</html>
