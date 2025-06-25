@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // function h1()
+        // {
+        //     console.log("hello")
+        // }
+        // h1()
+
+        // const a=()=>{
+        //     console.log("arrow function")
+        // }
+        // a()
+
+        // const sum =(a,b)=>{
+        //     console.log(a+b)
+        // }   
+        // sum(12,13)
+
+        // const sum1 =(a,b)=>{
+        //     return a+b
+        // }
+
+        // var result=sum1(12,1)
+        // console.log("sum="+result)
+
+        const prime=(num)=>
+        {
+            var count=0
+            for(var i=1;i<=num;i++)
+            {
+                if(num%i==0)
+                {
+                    count++
+                }
+            }
+            return count
+        }
+
+        var count=0
+        n=parseInt(prompt("Enter the number:"))
+        count=prime(n)
+        if(count==2)
+        {
+            alert("it is prime number")
+        }
+        else 
+        {
+            alert("it is not a prime number")
+        }
+
+    </script>
+</body>
+</html>
