@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1
+        {
+            height: 200px;
+            width:200px;
+            background-color: aqua;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box1"  >
+        <!-- <p id="p1" ondrag="drag(event)" draggable="true" ondr>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eos ipsum accusantium quod mollitia? Sapiente quas voluptatibus dolore aperiam hic repellendus sint debitis quo blanditiis nihil, possimus rerum. Tempora, quaerat?</p> -->
+         <p id="p1" ondragenter="dragenter(event)" ondragleave="dragleave(event)"  draggable="true">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora delectus rem dolore eligendi dignissimos quaerat. Vitae nostrum tempore officia alias? Laudantium ab tempora pariatur fugiat, iste non libero et excepturi.
+         </p>
+    </div>
+<script>
+    let p1=document.getElementById('p1')
+    // function drag(event)
+    // {
+    //     p1.style.color='red'
+    // }
+    function dragenter(event)
+    {
+        p1.style.color='blue'
+        p1.innerText='drag enter'
+    }
+    function dragleave(event)
+    {
+        p1.style.color='blue'
+        p1.innerText='drag leave'
+    }
+</script>
+</body>
+</html>
