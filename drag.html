@@ -18,25 +18,42 @@
     
     <div class="box1"  >
         <!-- <p id="p1" ondrag="drag(event)" draggable="true" ondr>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eos ipsum accusantium quod mollitia? Sapiente quas voluptatibus dolore aperiam hic repellendus sint debitis quo blanditiis nihil, possimus rerum. Tempora, quaerat?</p> -->
-         <p id="p1" ondragenter="dragenter(event)" ondragleave="dragleave(event)"  draggable="true">
+         <!-- <p id="p1" ondragenter="dragenter(event)" ondragleave="dragleave(event)"  draggable="true">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora delectus rem dolore eligendi dignissimos quaerat. Vitae nostrum tempore officia alias? Laudantium ab tempora pariatur fugiat, iste non libero et excepturi.
-         </p>
+         </p> -->
+         <P id="p1" draggable="true" ondragend="dragend()">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius maxime a nulla eaque asperiores atque, saepe veritatis pariatur odio unde ut praesentium obcaecati natus quidem minima, labore, ullam excepturi facilis?
+         </P>
     </div>
 <script>
     let p1=document.getElementById('p1')
+    let box1=document.querySelector('.box1')
     // function drag(event)
     // {
     //     p1.style.color='red'
     // }
-    function dragenter(event)
+    // function dragenter(event)
+    // {
+    //     p1.style.color='blue'
+    //     p1.innerText='drag enter'
+    // }
+    // function dragleave(event)
+    // {
+    //     p1.style.color='blue'
+    //     p1.innerText='drag leave'
+    // }
+    // function dragover()
+    // {
+    //     p1.style.color='blue';
+    //     p1.innerText='drag over'
+    // }
+    function dragend()
     {
-        p1.style.color='blue'
-        p1.innerText='drag enter'
-    }
-    function dragleave(event)
-    {
-        p1.style.color='blue'
-        p1.innerText='drag leave'
+        p1.style.color='red'
+        p1.innerHTML='drag end'
+        box1.style.border='2px solid black'
+        box1.style.borderRadius='400px'
+
     }
 </script>
 </body>
