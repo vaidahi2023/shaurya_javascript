@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box
+        {
+            height: 100px;
+            width:100px;
+            background-color: aqua;
+            position: absolute;
+            top:100px;
+            left:200px;
+            cursor: grab;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="box"></div>
+
+    <script>
+        let box=document.getElementById('box')
+        let offsetX,offsetY
+        let dragging=false
+
+        box.addEventListener("mousedown",function(event)
+        {
+            dragging=true
+            offsetX=event.clientX - box.offsetLeft
+            offsetY=event.clientY-box.offsetTop
+        })
+        box.addEventListener('mousemove',function(event) {
+            
+            if(dragging)
+            {   
+                box.style.left=(event.clientX-offsetX)+"px";
+                box.style.top=(event.clientY-offsetY)+"px";
+                console.log("offsetx="+(event.clientX-offsetX)+"px")
+                console.log("offsety="+(event.clientY-offsetY)+"px")
+            }
+        })
+    </script>
+</body>
+</html>
