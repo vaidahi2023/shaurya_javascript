@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box
+        {
+            height: 200px;
+            width:300px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusantium, harum maxime temporibus eaque inventore adipisci, facere sed animi nulla nam odit culpa laborum quod nobis reiciendis doloremque eum aperiam.</p>
+</div> 
+
+<script>
+    // window.addEventListener("DOMContentLoaded",()=>
+    // {
+    //     alert("dom load")
+    // })
+    window.addEventListener("paste",()=>
+    {
+        alert("paste is loaded")
+    })
+    window.addEventListener("resize",()=>
+    {
+        alert("resize is loaded")
+    })
+    window.addEventListener("copy",()=>
+    
+    {
+        alert("copy is loaded")
+    })
+</script>
+</body>
+
+</html>
