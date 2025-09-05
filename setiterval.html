@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //setInterval(function,time duration)
+    //     setInterval(()=>
+    // {
+    //     console.log("hello");
+    // },1000)
+    var count=0;
+    var countp =setInterval(()=>
+    {
+        count++
+        console.log("hello",count);
+        if(count==20)
+        {
+            clearInterval(countp)
+        }
+    },1000)
+    console.log(countp)
+    </script>
+</body>
+</html>

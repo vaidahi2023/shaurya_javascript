@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #counter
+        {
+            height: 100px;
+            width:200px;
+            background-color: antiquewhite;
+            color: blue;
+            text-align: center;
+            font-size: 20px;
+        }
+        #start 
+        {
+            height: 50px;
+            width:80px;
+            background-color: aqua;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-right: 50px;
+        }
+        
+        #stop 
+        {
+            height: 50px;
+            width:80px;
+            background-color: red;
+            color:white;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter"></div>
+    <button id="start" >Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        // let counter=document.getElementById('counter');
+        // let count=0;
+        // setInterval(()=>
+        // {
+        //     count++
+        //     counter.textContent=count
+        // },2000)
+
+        let startbtn=document.getElementById('start')
+        let stopbtn=document.getElementById('stop')
+        let counter=document.getElementById('counter');
+        let count=0;
+        let i=null;
+        function startcount()
+        {
+            i=setInterval(()=>
+            {
+                count++
+                counter.textContent=count
+            },1000)
+        }
+        function stopcount()
+        {
+            clearInterval(i)
+            i=null
+        }
+        startbtn.addEventListener('click',startcount)
+        stopbtn.addEventListener('click',stopcount)
+    </script>
+</body>
+</html>
