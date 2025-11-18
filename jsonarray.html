@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var students=[
+        {
+            id:1,
+            name:"raj",
+            age:23
+        },
+        {
+            id:2,
+            name:"het",
+            age:20   
+        },
+        {
+            id:2,
+            name:"shaurya",
+            age:15
+        }
+    ]
+        console.log(students)
+        // for(var i=0;i<students.length;i++)
+        // {
+        //     console.log("id="+students[i].id)
+        //     console.log("name="+students[i].name)
+        //     console.log("age="+students[i].age)
+        // }
+
+        students.forEach((stu)=>
+        {
+            console.log("id="+stu.id)
+            console.log("name="+stu.name)
+            console.log("age="+stu.age)
+        })
+
+        const name=students.map((stu)=>
+        {
+            return stu.name.toUpperCase();
+        })
+        console.log(name)
+    </script>
+</body>
+</html
